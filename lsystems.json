@@ -1,0 +1,22 @@
+{
+    "settings": {
+    },
+    "systems": {
+        "sierpinski_triangle": {
+            "angle": 120,
+            "start": "F-G-G",
+            "rules": {
+                "F": "F-G+F+G-F",
+                "G": "GG"
+            },
+            "iterations": 4
+        },
+        "koch_curve": {
+            "start": "F",
+            "rules": {
+                "F": "F-F+F+F-F"
+            },
+            "iterations": 3
+        }
+    }
+}
