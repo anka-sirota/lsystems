@@ -4,7 +4,7 @@
     "systems": {
         "sierpinski_triangle": {
             "angle": 120,
-            "start": "F-G-G",
+            "axiom": "F-G-G",
             "rules": {
                 "F": "F-G+F+G-F",
                 "G": "GG"
@@ -12,14 +12,14 @@
             "iterations": 4
         },
         "koch_curve": {
-            "start": "F",
+            "axiom": "F",
             "rules": {
                 "F": "F-F+F+F-F"
             },
             "iterations": 3
         },
         "hilbert_curve": {
-            "start": "A",
+            "axiom": "A",
             "rules": {
                 "A": "+BF-AFA-FB+",
                 "B": "-AF+BFB+FA-"

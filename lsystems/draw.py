@@ -14,11 +14,11 @@ def bounding_box(points):
 
 def iterate_lsystem(lconfig):
     iterations = lconfig.get('iterations', DEFAULT_ITERATIONS)
-    start = lconfig['start']
+    axiom = lconfig['axiom']
     rules = lconfig['rules']
 
-    commands = start
-    print(f'Iterating from {start} with {rules}, {iterations} times')
+    commands = axiom
+    print(f'Iterating from {axiom} with {rules}, {iterations} times')
     while iterations:
         chunks = []
         for symbol in commands:
