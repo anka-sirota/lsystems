@@ -17,6 +17,14 @@
                 "F": "F-F+F+F-F"
             },
             "iterations": 3
+        },
+        "hilbert_curve": {
+            "start": "A",
+            "rules": {
+                "A": "+BF-AFA-FB+",
+                "B": "-AF+BFB+FA-"
+            },
+            "iterations": 5
         }
     }
 }
