@@ -6,6 +6,12 @@ DEFAULT_DISTANCE = 30
 DEFAULT_ITERATIONS = 2
 
 
+def bounding_box(points):
+    x_coordinates, y_coordinates = zip(*points)
+    return [(min(x_coordinates), min(y_coordinates)),
+            (max(x_coordinates), max(y_coordinates))]
+
+
 def iterate_lsystem(lconfig):
     iterations = lconfig.get('iterations', DEFAULT_ITERATIONS)
     start = lconfig['start']
@@ -43,12 +49,13 @@ def draw_lsystem(name, commands):
         elif cmd == '-':
             t.right(angle)
     t.penDown()
-    points = [_.split(',') for _ in t.getSVGElements()[0].get_points().split('  ') if _]
+    points = [[float(__) for __ in _.split(',')] for _ in t.getSVGElements()[0].get_points().split('  ') if _]
+    bbox = bounding_box(points)
 
     dwg = svgwrite.Drawing(output_file)
     polyline = dwg.polyline(points=points, stroke='black', fill='none', stroke_width=2)
     dwg.add(polyline)
-    dwg.fit(horiz='left', vert='middle', scale='meet')
+    polyline.translate(-bbox[0][0], -bbox[0][1])
     dwg.save()
     print(f'Saved to {output_file}')
 
