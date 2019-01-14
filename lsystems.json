@@ -59,6 +59,15 @@
                 "G": "+F-GG--G-F++F+G"
             },
             "iterations": 3
+        },
+        "dragon_curve": {
+            "angle": 90,
+            "axiom": "FX",
+            "rules": {
+                "X": "X+YF+",
+                "Y": "-FX-Y"
+            },
+            "iterations": 9
         }
     }
 }
