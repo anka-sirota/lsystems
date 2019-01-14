@@ -34,7 +34,11 @@ def iterate_lsystem(lconfig):
 
 
 def draw_lsystem(name, commands):
-    angle = lconfig.get('angle', DEFAULT_ANGLE)
+    angle = lconfig.get('angle')
+    angle_left = lconfig.get('angle_left')
+    angle_right = lconfig.get('angle_right')
+    if not angle_right and not angle_right and not angle:
+        angle = DEFAULT_ANGLE
     distance = lconfig.get('distance', DEFAULT_DISTANCE)
 
     t = Turtle()
@@ -45,9 +49,9 @@ def draw_lsystem(name, commands):
         if cmd in ('F', 'G'):
             t.forward(distance)
         elif cmd == '+':
-            t.left(angle)
+            t.left(angle_left or angle)
         elif cmd == '-':
-            t.right(angle)
+            t.right(angle_right or angle)
     t.penDown()
     points = [[float(__) for __ in _.split(',')] for _ in t.getSVGElements()[0].get_points().split('  ') if _]
     bbox = bounding_box(points)

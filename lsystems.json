@@ -25,6 +25,40 @@
                 "B": "-AF+BFB+FA-"
             },
             "iterations": 4
+        },
+        "koch_snowflake": {
+            "angle_right": 60,
+            "angle_left": 120,
+            "axiom": "F+F+F",
+            "rules": {
+                "F": "F-F+F-F"
+            },
+            "iterations": 3
+        },
+        "koch_snowflake_1": {
+            "angle": 60,
+            "axiom": "F+-+F",
+            "rules": {
+                "F": "F-F+F-F"
+            },
+            "iterations": 5
+        },
+        "koch_snowflake_2": {
+            "angle": 120,
+            "axiom": "F+-+F",
+            "rules": {
+                "F": "F-F+F-F"
+            },
+            "iterations": 5
+        },
+        "gosper_island": {
+            "angle": 60,
+            "axiom": "F",
+            "rules": {
+                "F": "F-G--G+F++FF+G-",
+                "G": "+F-GG--G-F++F+G"
+            },
+            "iterations": 3
         }
     }
 }
