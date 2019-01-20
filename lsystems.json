@@ -14,9 +14,17 @@
         "koch_curve": {
             "axiom": "F",
             "rules": {
-                "F": "F-F+F+F-F"
+                "F": "F+F-F-F+F"
             },
             "iterations": 3
+        },
+        "koch_curve_2": {
+            "angle": 80,
+            "axiom": "F",
+            "rules": {
+                "F": "F+F--F+F"
+            },
+            "iterations": 5
         },
         "hilbert_curve": {
             "axiom": "A",
@@ -27,13 +35,12 @@
             "iterations": 4
         },
         "koch_snowflake": {
-            "angle_right": 60,
-            "angle_left": 120,
-            "axiom": "F+F+F",
+            "angle": 60,
+            "axiom": "F--F--F",
             "rules": {
-                "F": "F-F+F-F"
+                "F": "F+F--F+F"
             },
-            "iterations": 3
+            "iterations": 4
         },
         "koch_snowflake_1": {
             "angle": 60,
@@ -68,6 +75,84 @@
                 "Y": "-FX-Y"
             },
             "iterations": 9
+        },
+        "peano_curve": {
+            "angle": 90,
+            "axiom": "F",
+            "rules": {
+                "F": "F+F-F-F-F+F+F+F-F"
+            },
+            "iterations": 3
+        },
+        "icy": {
+            "angle": 90,
+            "axiom": "F+F+F+F",
+            "rules": {
+                "F": "FF+F++F+F"
+            },
+            "iterations": 3
+        },
+        "icy_60": {
+            "angle": 60,
+            "axiom": "F+F+F+F",
+            "rules": {
+                "F": "FF+F++F+F"
+            },
+            "iterations": 4
+        },
+        "icy_100": {
+            "angle": 100,
+            "axiom": "F+F+F+F",
+            "rules": {
+                "F": "FF+F++F+F"
+            },
+            "iterations": 4
+        },
+        "pentadendrite": {
+            "angle": 72,
+            "axiom": "F-F-F-F-F",
+            "rules": {
+                "F": "F-F-F++F+F-F"
+            },
+            "iterations": 3
+        },
+        "pentadendrite_broken": {
+            "angle": 70,
+            "axiom": "F-F-F-F-F",
+            "rules": {
+                "F": "F-F-F++F+F-F"
+            },
+            "iterations": 3
+        },
+        "penroze_filling": {
+            "angle": 36,
+            "axiom": "[7]++[7]++[7]++[7]++[7]",
+            "draw": "6789",
+            "rules": {
+                "6": "81++91----71[-81----61]++",
+                "7": "+81--91[---61--71]+",
+                "8": "-61++71[+++81++91]-",
+                "9": "--81++++61[+91++++71]--71",
+                "1": ""
+            },
+            "iterations": 5
+        },
+        "plantlike": {
+            "axiom": "F",
+            "rules": {
+               "F":  "F[+F]F[-F]"
+            },
+            "angle": 27,
+            "angle_chaos": 0.5,
+            "iterations": 4
+        },
+        "some_filling": {
+            "axiom": "F+F+F+F",
+            "rules": {
+                "F": "FF+F-F+F+FF"
+            },
+            "angle": 90,
+            "iterations": 3
         }
     }
 }
