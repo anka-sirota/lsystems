@@ -153,6 +153,50 @@
             },
             "angle": 90,
             "iterations": 3
+        },
+        "levy_c_curve_levy_dragon": {
+            "angle": 45,
+            "axiom": "F",
+            "rules": {
+                "F": "+F--F+"
+            },
+            "iterations": 11
+        },
+        "island_triangle_curve": {
+            "angle": 120,
+            "axiom": "F-F-F",
+            "rules": {
+                "F": "F-b+FF-F-FF-Fb-FF+b-FF+F+FF+Fb+FFF",
+                "b": "bbbbbb"
+            },
+            "iterations": 2
+        },
+        "island_square_curve": {
+            "angle": 90,
+            "axiom": "F-F-F-F",
+            "rules": {
+                "F": "F-b+FF-F-FF-Fb-FF+b-FF+F+FF+Fb+FFF",
+                "b": "bbbbbb"
+            },
+            "iterations": 2
+        },
+        "island_pentacurve": {
+            "angle": 72,
+            "axiom": "F-F-F-F-F",
+            "rules": {
+                "F": "F-b+FF-F-FF-Fb-FF+b-FF+F+FF+Fb+FFF",
+                "b": "bbbbbb"
+            },
+            "iterations": 2
+        },
+        "island_hexacurve": {
+            "angle": 60,
+            "axiom": "F-F-F-F-F-F",
+            "rules": {
+                "F": "F-b+FF-F-FF-Fb-FF+b-FF+F+FF+Fb+FFF",
+                "b": "bbbbbb"
+            },
+            "iterations": 2
         }
     }
 }
